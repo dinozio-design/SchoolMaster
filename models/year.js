@@ -13,4 +13,4 @@ Year.init(
           }
         }
 );
-module.exports=Department
+module.exports=Year
