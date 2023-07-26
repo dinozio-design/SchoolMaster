@@ -37,7 +37,7 @@ Student.init(
                 key:'id'
             }
           },
-          year_enrolled:{
+          academic_session:{
             type: DataTypes.STRING,
             references:{
                 model: 'year',
