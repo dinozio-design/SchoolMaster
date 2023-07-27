@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Faculty extends Model {}
 
-Project.init(
+Faculty.init(
   {
     fullName: {
       type: DataTypes.STRING,
