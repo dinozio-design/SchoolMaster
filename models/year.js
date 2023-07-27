@@ -33,7 +33,13 @@ Year.init(
           }
         },
 
-       } 
+       },{
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'year',
+      } 
     
 );
 module.exports=Year
