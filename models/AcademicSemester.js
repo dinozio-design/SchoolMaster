@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Year extends Model {}
+class Academic_Semester extends Model {}
 
-Year.init(
+Academic_Semester.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -38,8 +38,8 @@ Year.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'year',
+        modelName: 'academic_semester',
       } 
     
 );
-module.exports=Year
+module.exports=Academic_Semester
