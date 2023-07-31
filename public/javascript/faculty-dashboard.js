@@ -2,19 +2,7 @@
 async function viewfacultyprofile(event) {
   event.preventDefault();
 
-  const response = await fetch(`/api/posts`, {
-    method: 'POST',
-   
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert("Failed to created profile");
-  }
+  res.render('faculty-dashboard');
 };
 
 document.querySelector('#faculty-profile').addEventListener('submit', viewfacultyprofile);
@@ -23,19 +11,7 @@ document.querySelector('#faculty-profile').addEventListener('submit', viewfacult
 async function viewStudentcourses(event) {
   event.preventDefault();
 
-  const response = await fetch(`/api/posts`, {
-    method: 'POST',
-   
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert("Failed to created profile");
-  }
+  res.render('faculty-dashboard');
 };
 
 document.querySelector('#student-courses').addEventListener('submit', viewStudentcourses);

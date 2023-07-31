@@ -1,80 +1,33 @@
+//view student profile"
 async function viewStudentprofile(event) {
   event.preventDefault();
 
-  const response = await fetch(`/api/posts`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert("Failed to created profile");
-  }
+  res.render('faculty-dashboard');
 };
-
 document.querySelector('#student-profile').addEventListener('click', viewStudentprofile);
 
-//view student profile
+//view student courses
 async function viewStudentcourses(event) {
   event.preventDefault();
 
-  const response = await fetch(`/api/posts`, {
-    method: 'POST',
-   
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert("Failed to created profile");
-  }
+  res.render('faculty-dashboard');
 };
-
 document.querySelector('#student-courses').addEventListener('click', viewStudentcourses);
 
+//view faculty profile
 async function viewfacultyprofile(event) {
   event.preventDefault();
 
-  const response = await fetch(`/api/posts`, {
-    method: 'POST',
-   
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert("Failed to created profile");
-  }
+  res.render('faculty-dashboard');
 };
 
 document.querySelector('#faculty-profile').addEventListener('click', viewfacultyprofile);
 
-//view student profile
+//view  department
 async function viewdepartment(event) {
   event.preventDefault();
 
-  const response = await fetch(`/api/posts`, {
-    method: 'POST',
-   
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert("Failed to created profile");
-  }
+  res.render('faculty-dashboard');
 };
 
 document.querySelector('#view-department').addEventListener('click', viewdepartment);

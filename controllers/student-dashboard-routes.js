@@ -1,3 +1,5 @@
+//display student dashboard page
+
 const router = require('express').Router();
 
 router.get('/',(req,res)=>{
