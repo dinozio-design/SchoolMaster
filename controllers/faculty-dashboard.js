@@ -1,4 +1,15 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const {Admin,Courses,Department,Faculty,Student,Year,User} = require('../models');
 
+
+
+router.get('/',(req,res)=>{
+  res.render('faculty-dashboard');
+
+
+
+
+})
+
+
+
+module.exports = router;
