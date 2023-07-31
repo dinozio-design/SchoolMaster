@@ -1,30 +1,32 @@
-<section class="card text-center">
-      <div class="card-body">
-        <h3 class="card-title">Login</h3>
-        <form id="login">
-            <div class="card-text">
-            <label for="loginUsername">Username</label>
-            <input type="text" placeholder="username" id="loginUsername">
-            </div>
-            <div class="card-text">
-            <label for="loginPassword">Password</label>
-            <input type="text" placeholder="password" id="loginPassword">
-            </div>
-          <div class="card-text">
-            <label>User Type</label><br>
-            <input type="radio" name="userType" id="admin" value="admin">
-            <label for="admin">Admin</label>
-            <input type="radio" name="userType" id="student" value="student">
-            <label for="student">Student</label>
-            <input type="radio" name="userType" id="faculty" value="faculty">
-            <label for="faculty">Faculty</label>
-          </div>
-         <button>Login!</button><br>
-            <a href="/signup">Signup instead</a>
-        </form>
-      </div>
+<div class="container">
+<section class="image-body">
+  <div class="img-body">
+<img class="login-image" src="/assets/images/login.jpg" alt="login Image">
+</div>
 </section>
+<section class="login-card text-center">
+    <div class="card-body">
+      <h3 class="login-card-title">Login to your Profile!</h3>
+      <form id="login">
+        <div class="login-label">
+          <label for="loginUsername">Username:</label>
+          <input type="text" placeholder="username" class="login-input" id="loginUsername">
+        </div>
+        <div class="login-label">
+          <label for="loginPassword">Password:</label>
+          <input type="password" placeholder="password" class="login-input" id="loginPassword">
+        </div>
+        <br/>
+        <button class="login-button">Login</button><br>
+        <a class="login-link" href="/signup">Signup instead!</a>
+      </form>
+    </div>
+  </section>
+  </div>
 
 <script src="/js/login.js"></script>
+
+
+
 
 
