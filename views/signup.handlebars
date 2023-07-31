@@ -1,27 +1,38 @@
-<section class="card text-center">
-  <div class="card-body">
-    <h3 class="card-title">Signup</h3>
-    <form id="signup">
-      <div class="card-text">
-        <label for="signupUsername">Username</label>
-        <input type="text" placeholder="username" id="signupUsername">
+<div class="container">
+<section class="image-content">
+  <div class="img-body">
+<img class="signup-image" src="/assets/images/signup-img image.jpg" alt="Signup Image">
+</div>
+</section>
+
+<section class='card text-center'>
+  <div class='card-body'>
+    <h3 class='card-title'>Sign up to create a new Profile!</h3>
+    <form id='signup'>
+      <div class='card-text'>
+        <label for='name'>Name: </label>
+        <input type='text' placeholder='name' id='name' />
       </div>
-      <div class="card-text">
-        <label for="signupPassword">Password</label>
-        <input type="password" placeholder="password" id="signupPassword">
+      <div class='card-text'>
+        <label for='signupUsername'>Email: </label>
+        <input type='email' placeholder='username' id='signupUsername' />
       </div>
-      <div class="card-text">
-        <label>User Type</label><br>
-        <input type="radio" name="userType" id="admin" value="admin">
-        <label for="admin">Admin</label>
-        <input type="radio" name="userType" id="student" value="student">
-        <label for="student">Student</label>
-        <input type="radio" name="userType" id="faculty" value="faculty">
-        <label for="faculty">Faculty</label>
+      <div class='card-text'>
+        <label for='signupPassword'>Password: </label>
+        <input type='password' placeholder='password' id='signupPassword' />
       </div>
-      <button>Signup!</button><br>
-      <a href="/login">Login instead</a>
+      <div id='userType' class='card-text'>
+        <label for='userTypeDropdown'>User Type:</label>
+        <select name='userType' id='userTypeDropDown'><br/>
+          <option value='admin'>Admin</option>
+          <option value='student'>Student</option>
+          <option value='faculty'>Faculty</option>
+        </select>
+      </div>
+      <button>Sign Up</button><br />
+      <a href='/login'>Login instead !</a>
     </form>
   </div>
 </section>
-<script src="/js/signup.js"></script>
+</div>
+<script src='/js/signup.js'></script>
