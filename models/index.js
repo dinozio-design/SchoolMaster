@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = require('./config/connection');
+const sequelize = require('../config/connection');
 const Admin = require('./Admin');
 const Courses = require('./courses');
 const Department = require('./department');
