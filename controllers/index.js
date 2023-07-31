@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //import express
 const router = require('express').Router();
 
@@ -17,3 +18,11 @@ router.use('/faculty-dashboard', facultyDashboardRoutes);
 
 
 module.exports = router;
+=======
+const router = require('express').Router();
+const loginSignOutRoutes = require('./login-signout-routes');
+
+router.use('/', loginSignOutRoutes);
+
+module.exports = router;
+>>>>>>> 849913f75b3a7edb2967a5a91babb8810aa3316c
