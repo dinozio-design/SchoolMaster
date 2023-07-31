@@ -11,7 +11,7 @@ async function viewStudentprofile(event) {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(response.statusText);
+    alert("Failed to created profile");
   }
 };
 
@@ -32,7 +32,7 @@ async function viewStudentcourses(event) {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(response.statusText);
+    alert("Failed to created profile");
   }
 };
 
@@ -52,7 +52,7 @@ async function viewfacultyprofile(event) {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(response.statusText);
+    alert("Failed to created profile");
   }
 };
 
@@ -73,7 +73,7 @@ async function viewdepartment(event) {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(response.statusText);
+    alert("Failed to created profile");
   }
 };
 
