@@ -2,7 +2,7 @@
 async function viewfacultyprofile(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/facultyprofile');
 };
 
 document.querySelector('#faculty-profile').addEventListener('submit', viewfacultyprofile);

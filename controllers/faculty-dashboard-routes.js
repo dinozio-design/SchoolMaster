@@ -2,7 +2,7 @@
 
 const router = require('express').Router();
 router.get('/',(req,res)=>{
-  res.render('faculty-dashboard');
+  res.render('./');
 })
 
 module.exports = router;
