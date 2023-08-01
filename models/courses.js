@@ -11,28 +11,35 @@ Courses.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    course_title: {
+    course: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     course_description: {
       type: DataTypes.STRING,
     },
-    department_id:{
+    student_id:{
+      type: DataTypes.INTEGER,
+      references:{
+       model:"student",
+       key:"id",
+      }
+    },
+    department:{
       type: DataTypes.INTEGER,
       references:{
        model:"Department",
        key:"id",
       }
     },
-    academic_year_id: {
+    semester: {
       type: DataTypes.INTEGER,
       references:{
-       model:"Year",
+       model:"academic_semester",
        key:"id",
       }
       },
-   course_fees:{
+   fees:{
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
