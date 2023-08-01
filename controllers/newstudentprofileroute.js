@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
 
     const studentprofile = studentData.map((data) => data.get({ plain: true }));
-    console.log("xxxxxxxxxxxxxxxxxx", profile)
+    console.log("xxxxxxxxxxxxxxxxxx", studentprofile)
    
     res.render('newstudentprofile', {
       studentprofile
