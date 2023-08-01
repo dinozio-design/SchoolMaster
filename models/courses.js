@@ -18,27 +18,27 @@ Courses.init(
     course_description: {
       type: DataTypes.STRING,
     },
-    student_id:{
-      type: DataTypes.INTEGER,
-      references:{
-       model:"student",
-       key:"id",
-      }
-    },
-    department:{
-      type: DataTypes.INTEGER,
-      references:{
-       model:"Department",
-       key:"id",
-      }
-    },
-    semester: {
-      type: DataTypes.INTEGER,
-      references:{
-       model:"academic_semester",
-       key:"id",
-      }
-      },
+    // student_id:{
+    //   type: DataTypes.INTEGER,
+    //   references:{
+    //    model:"student",
+    //    key:"id",
+    //   }
+    // },
+    // department:{
+    //   type: DataTypes.INTEGER,
+    //   references:{
+    //    model:"Department",
+    //    key:"id",
+    //   }
+    // },
+    // semester: {
+    //   type: DataTypes.INTEGER,
+    //   references:{
+    //    model:"academic_semester",
+    //    key:"id",
+    //   }
+    //   },
    fees:{
       type: DataTypes.DECIMAL,
       allowNull: false,

@@ -6,30 +6,37 @@ const Department = require('./department');
 const Faculty = require('./Faculty');
 const Student = require('./students');
 const User = require('./user');
-const Academic_Semester = require('./AcademicSemester');
+const Academic_Semester = require('./academic_semester');
 
 
-Student.hasMany(Courses, {
-    foreignKey: 'student_id'
-});
+// Student.hasMany(Courses, {
+//     foreignKey: 'student_id'
+// });
 
 Faculty.hasOne(Courses, {
     foreignKey: 'faculty_id'
 });
 
+// Courses.belongTo(Faculty, {
+//     foreignKey: 'faculty_id'
+// })
+
+
 Department.hasMany(Faculty, {
     foreignKey: 'department_id'
 });
 
-Courses.hasMany(Academic_Semester, {
-    foreignKey: 'courses_id'
-});
+// Courses.hasMany(Academic_Semester, {
+//     foreignKey: 'id'
+// });
 
-Student.hasOne(User);
+// Student.hasMany(Academic_Semester, {
+//     foreignKey: 'id'
+// });
 
-Faculty.hasOne(User);
-
-Admin.hasOne(User);
+// Student.hasOne(User);
+// Faculty.hasOne(User);
+// Admin.hasOne(User);
 
 module.exports = { Admin, Courses, Department, Faculty, Student, User, Academic_Semester };
 

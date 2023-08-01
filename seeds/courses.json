@@ -1,3 +1,13 @@
-[{"id":1,"course":"Advanced Calculus","course_description":"Develop your leadership skills and learn effective management strategies in this course.","semester":1,"fees":4990},
-{"id":2,"course":"Art History","course_description":"Develop your leadership skills and learn effective management strategies in this course.","semester":2,"fees":4386}
+[
+    {
+        "id":1,
+        "course":"Advanced Calculus",
+        "course_description":"Develop your leadership skills and learn effective management strategies in this course.",
+        "fees":4990
+    },
+    {
+        "id":2,
+        "course":"Art History",
+        "course_description":"Develop your leadership skills and learn effective management strategies in this course.",
+        "fees":4386}
 ]

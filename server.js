@@ -45,6 +45,6 @@ app.use((err, req, res, next) => {
 
 sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log(`App listening on http://localHost:${PORT}`);
   });
 });
