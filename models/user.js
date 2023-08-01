@@ -35,16 +35,34 @@ User.init(
         len: [8],
       },
     },
+    userType: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+        try {
+          console.log('Before Create - newUserData:', newUserData);
+          const hashedPassword = await bcrypt.hash(newUserData.password, 10);
+          newUserData.password = hashedPassword;
+          return newUserData;
+        } catch (err) {
+          console.log('Error hashing password:', err);
+          throw err;
+        }
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        return updatedUserData;
+        try {
+          console.log('Before Update - updatedUserData:', updatedUserData);
+          const hashedPassword = await bcrypt.hash(updatedUserData.password, 10);
+          updatedUserData.password = hashedPassword;
+          return updatedUserData;
+        } catch (err) {
+          console.log('Error hashing password:', err);
+          throw err;
+        }
       },
     },
     sequelize,

@@ -16,6 +16,13 @@ Department.init(
             type: DataTypes.STRING(30),
             allowNull: false,
         }
+        },
+        {
+            sequelize,
+            timestamps: false,
+            freezeTableName: true,
+            underscored: true,
+            modelName: 'department',
         }
 );
 module.exports=Department

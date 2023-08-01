@@ -1,9 +1,12 @@
 console.log("running")
 const sequelize = require('../config/connection');
-const { Academic_Semester, Courses, Student, User } = require('../models');
+
+const { Academic_Semester, Courses, Student, User, Faculty } = require('../models');
 
 const userData = require('./userData.json');
-const semesterData = require('./semesters.json')
+const semesterData = require('./semesters.json');
+const facultyData = require('./facultyprofile.json');
+
 const coursesData = require('./courses.json');
 const studentsData = require('./students.json');
 
@@ -29,6 +32,11 @@ const seedDatabase = async () => {
   });
 
   await Courses.bulkCreate(coursesData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  const faculties = await Faculty.bulkCreate(facultyData, {
     individualHooks: true,
     returning: true,
   });
