@@ -1,8 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const {User,Admin,Faculty, Student} = require('../models');
+const {User,Admin,Faculty, Student} = require('../../models');
 const bcrypt  = require("bcrypt");
 
+router.get("/", (req, res) => {
+  console.log("Inside /////// ***********");
+    // User.findAll({
+    //   include:[Admin,Faculty,Student]
+    // })
+    
+    User.findAll({})
+      .then(dbUsers => {
+        res.json(dbUsers);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ msg: "an error occured", err });
+      });
+  });
 
 router.get("/login",(req,res)=>{
   console.log("Inside login ***********");
@@ -16,20 +31,6 @@ router.get("/signup",(req,res)=>{
   console.log("Inside signup ***********");
     res.render("signup")
 })
-
-router.get("/", (req, res) => {
-  console.log("Inside /////// ***********");
-    User.findAll({
-      include:[Admin,Faculty,Student]
-    })
-      .then(dbUsers => {
-        res.json(dbUsers);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json({ msg: "an error occured", err });
-      });
-  });
 
   // logout by hitting /users/logout
 router.get("/logout",(req,res)=>{

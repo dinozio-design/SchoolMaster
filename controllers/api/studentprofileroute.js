@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Student = require('../models/students');
+const Student = require('../../models/students');
 // const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     const studentprofile = studentData.map((data) => data.get({ plain: true }));
     console.log("xxxxxxxxxxxxxxxxxx", profile)
    
-    res.render('studentprofile', {
+    res.status(200).render('studentprofile', {
       studentprofile
     });
   } catch (err) {

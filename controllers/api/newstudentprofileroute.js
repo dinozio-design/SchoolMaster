@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Student = require('../models/students');
+const Student = require('../../models/students');
 // const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {

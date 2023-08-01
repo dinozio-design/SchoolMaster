@@ -1,7 +1,7 @@
 const router = require('express').Router();
 console.log(`got router`)
-const Courses = require('../models/courses');
-const Academic_Semester = require('../models/academic_semester'); 
+const Courses = require('../../models/courses');
+const Academic_Semester = require('../../models/academic_semester'); 
 console.log(`got courses`)
 
 router.get('/:id', async (req, res) => {
