@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require("express");
 const exphbs = require("express-handlebars");
 const allRoutes = require("./controllers");
@@ -5,6 +6,7 @@ const session = require("express-session");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 require('dotenv').config();
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,11 +29,12 @@ const sess = {
 };
 app.use(session(sess));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use("/", allRoutes);
 
