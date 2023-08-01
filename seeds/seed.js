@@ -1,18 +1,34 @@
+console.log("running")
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { Academic_Semester, Courses, Student, User } = require('../models');
 
+const userData = require('./userData.json');
+const semesterData = require('./semesters.json')
 const coursesData = require('./courses.json');
 const studentsData = require('./students.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(coursesData, {
+  await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  await User.bulkCreate(studentsData, {
+  await Academic_Semester.bulkCreate(semesterData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  console.log('++++++++++++++++++++++++++++++++++++++++++');
+  console.log(semesterData)
+
+  await Student.bulkCreate(studentsData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  await Courses.bulkCreate(coursesData, {
     individualHooks: true,
     returning: true,
   });
