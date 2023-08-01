@@ -9,6 +9,9 @@ const facultyDashboardRoutes = require('./faculty-dashboard-routes');
 const loginSignOutRoutes = require('./login-signout-routes');
 const facultyProfileRoute = require('./facultyprofileroute'); 
 const newfacultyProfile = require('./newfacultyprofileroute');
+const studentProfileRoute = require('./studentprofileroute'); 
+const newstudentProfile = require('./newstudentprofileroute');
+
 
 router.use('/', loginSignOutRoutes);
 router.use('/admin-dashboard', adminDashboardroutes);
@@ -18,6 +21,8 @@ router.use('/facultygallery', facultyProfileRoute);
 router.use('/newfacultyprofile', newfacultyProfile);
 router.use('/sessions', sessionRoutes);
 router.use('/courses', coursesRoutes);
-router.use('/addcourse', addcourseRoutes)
+router.use('/addcourse', addcourseRoutes);
+router.use('/studentprofile', studentProfileRoute);
+router.use('/newstudentprofile', newstudentProfile);
 
 module.exports = router;
