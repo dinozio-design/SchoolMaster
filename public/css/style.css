@@ -177,3 +177,10 @@ body {
       color: #007bff;
       text-decoration: none;
     }
+
+    .box-shadow-card {
+      /* Customize the box shadow properties below as needed */
+      margin-top: 5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Example box shadow style */
+    }
