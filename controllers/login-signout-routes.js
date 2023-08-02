@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const {User,Admin,Faculty, Student} = require('../../models');
+const {User,Admin,Faculty, Student} = require('../models');
 const bcrypt  = require("bcrypt");
 
 router.get("/", (req, res) => {
   console.log("Inside /////// ***********");
-    // User.findAll({
-    //   include:[Admin,Faculty,Student]
-    // })
+    User.findAll({
+      include:[Admin,Faculty,Student]
+    })
     
     User.findAll({})
       .then(dbUsers => {
         res.json(dbUsers);
+        // res.render("login");
       })
       .catch(err => {
         console.log(err);
