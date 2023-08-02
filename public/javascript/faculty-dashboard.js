@@ -2,7 +2,7 @@
 async function viewfacultyprofile(event) {
   event.preventDefault();
 
-  res.render('/facultyprofile');
+  res.render('/facultygallery');
 };
 
 document.querySelector('#faculty-profile').addEventListener('submit', viewfacultyprofile);
@@ -11,7 +11,7 @@ document.querySelector('#faculty-profile').addEventListener('submit', viewfacult
 async function viewStudentcourses(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/courses');
 };
 
 document.querySelector('#student-courses').addEventListener('submit', viewStudentcourses);

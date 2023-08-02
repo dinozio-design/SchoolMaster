@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
           if (userType === 'student') {
             location.href="/student-dashboard"
           } else if (userType === 'faculty') {
-            location.href="/faculty-dashboard"
+            // location.href="/faculty-dashboard"
+            location.redirect("/faculty-dashboard");
           } else {
             location.href="/admin-dashboard"
           }
