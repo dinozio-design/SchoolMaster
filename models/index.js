@@ -6,7 +6,7 @@ const Department = require('./department');
 const Faculty = require('./Faculty');
 const Student = require('./students');
 const User = require('./user');
-const Academic_Semester = require('./AcademicSemester');
+const Academic_Semester = require('./academic_semester');
 
 
 Student.hasMany(Courses, {
