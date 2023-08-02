@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Academic_Semester = require('../../models/academic_semester');
+const Academic_Semester = require('../models/academic_semester');
 console.log('got the session model')
 // const withAuth = require('../utils/auth')
 

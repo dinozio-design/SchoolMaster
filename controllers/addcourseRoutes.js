@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Courses = require('../../models/courses');
+const Courses = require('../models/courses');
 
 // Route to render the add course page
 router.get('/', async (req, res) => {

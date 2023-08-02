@@ -5,9 +5,10 @@ const bcrypt  = require("bcrypt");
 
 router.get("/", (req, res) => {
   console.log("Inside /////// ***********");
-    User.findAll({
-      include:[Admin,Faculty,Student]
-    })
+    // User.findAll({
+    //   // include:[Admin,Faculty,Student]
+    //   // include:[Faculty,Student]
+    // })
     
     User.findAll({})
       .then(dbUsers => {
