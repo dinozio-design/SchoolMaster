@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     const studentprofile = studentData.map((data) => data.get({ plain: true }));
     console.log("xxxxxxxxxxxxxxxxxx", studentprofile)
    
-    res.render('studentprofile', {
+    res.status(200).render('studentprofile', {
       studentprofile
     });
   } catch (err) {

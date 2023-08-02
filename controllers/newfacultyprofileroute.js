@@ -4,7 +4,7 @@ const Faculty = require('../models/Faculty');
 
 router.get('/', async (req, res) => {
   try {
-    
+    console.log("we are in facultyprofileroute");
     const facultyData = await Faculty.findAll();
     console.log("..............",facultyData)
     
