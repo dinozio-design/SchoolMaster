@@ -36,7 +36,11 @@ Department.hasMany(Faculty, {
 
 // Student.hasOne(User);
 // Faculty.hasOne(User);
-// Admin.hasOne(User);
+
+User.belongsTo(Admin, { foreignKey: 'id', constraints: false });
+User.belongsTo(Student, { foreignKey: 'id', constraints: false });
+User.belongsTo(Faculty, { foreignKey: 'id', constraints: false });
+
 
 module.exports = { Admin, Courses, Department, Faculty, Student, User, Academic_Semester };
 
