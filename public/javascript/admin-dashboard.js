@@ -2,7 +2,7 @@
 async function viewStudentprofile(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/singlestudentprofile');
 };
 document.querySelector('#student-profile').addEventListener('click', viewStudentprofile);
 
@@ -10,7 +10,7 @@ document.querySelector('#student-profile').addEventListener('click', viewStudent
 async function viewStudentcourses(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/courses');
 };
 document.querySelector('#student-courses').addEventListener('click', viewStudentcourses);
 
@@ -18,7 +18,7 @@ document.querySelector('#student-courses').addEventListener('click', viewStudent
 async function viewfacultyprofile(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/singlefacultyprofile');
 };
 
 document.querySelector('#faculty-profile').addEventListener('click', viewfacultyprofile);
@@ -27,7 +27,7 @@ document.querySelector('#faculty-profile').addEventListener('click', viewfaculty
 async function viewdepartment(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/');
 };
 
 document.querySelector('#view-department').addEventListener('click', viewdepartment);

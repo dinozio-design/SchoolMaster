@@ -1,7 +1,7 @@
 //view student profile
 async function viewStudentprofile(event) {
   event.preventDefault();
-  res.render('faculty-dashboard');
+  res.render('/studentprofile');
 };
 
 document.querySelector('#student-profile').addEventListener('click', viewStudentprofile);
@@ -10,7 +10,7 @@ document.querySelector('#student-profile').addEventListener('click', viewStudent
 async function viewStudentcourses(event) {
   event.preventDefault();
 
-  res.render('faculty-dashboard');
+  res.render('/courses');
 };
 
 document.querySelector('#student-courses').addEventListener('submit', viewStudentcourses);
