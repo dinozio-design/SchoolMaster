@@ -28,16 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(signupData),
       })
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((data) => {
           console.log("Server response:", data);
           if (userType === 'student') {
-            location.href="/student-dashboard"
+            console.log("Sdsds inside js studen ***********")
+            location.href="/student-dashboard";
           } else if (userType === 'faculty') {
-            // location.href="/faculty-dashboard"
-            location.redirect("/faculty-dashboard");
+            location.href="/faculty-dashboard";
           } else {
-            location.href="/admin-dashboard"
+            document.location.replace('/admin-dashboard');
           }
         })
         .catch((error) => {

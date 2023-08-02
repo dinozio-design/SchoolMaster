@@ -39,6 +39,34 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    admin_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Admin',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
+    },
+    student_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Student',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
+    },
+    faculty_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Faculty',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
+    },
+   
   },
   {
     hooks: {

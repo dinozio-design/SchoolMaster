@@ -1,4 +1,4 @@
-//view student profile
+  //view student profile
 async function viewStudentprofile(event) {
   event.preventDefault();
   res.render('/studentprofile');

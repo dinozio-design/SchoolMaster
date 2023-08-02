@@ -5,20 +5,7 @@ const bcrypt  = require("bcrypt");
 
 router.get("/", (req, res) => {
   console.log("Inside /////// ***********");
-    // User.findAll({
-    //   // include:[Admin,Faculty,Student]
-    //   // include:[Faculty,Student]
-    // })
-    
-    User.findAll({})
-      .then(dbUsers => {
-        // res.json(dbUsers);
-        res.render("login");
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json({ msg: "an error occured", err });
-      });
+    res.render("login");
   });
 
 router.get("/login",(req,res)=>{
@@ -34,7 +21,7 @@ router.get("/signup",(req,res)=>{
     res.render("signup")
 })
 
-  // logout by hitting /users/logout
+  // logout by hitting /logout
 router.get("/logout",(req,res)=>{
     req.session.destroy();
     res.redirect('/');
@@ -51,9 +38,10 @@ router.get("/:id", (req, res) => {
       });
 });
 
-// sign up users/
+// sign up 
 router.post("/", (req, res) => {
   // run hooks to hash and salt password; create user
+  
     User.create(req.body, {individualHooks: true} )
       .then(newUser => {
         // IMMEDIATE LOG IN = create new session for user with id and username (sessions set to 30 min)
@@ -69,7 +57,7 @@ router.post("/", (req, res) => {
       });
 });
 
-// login /users/login
+// login /login
 router.post("/login", (req, res) => {
   // find username name that matches request
     User.findOne({
@@ -102,6 +90,7 @@ router.post("/login", (req, res) => {
 
 router.post("/signup", (req, res) => {
   // run hooks to hash and salt password; create user
+  console.log("******Sign up Data*****", req.body)
     User.create(req.body, {individualHooks: true} )
       .then(newUser => {
         // IMMEDIATE LOG IN = create new session for user with id and username (sessions set to 30 min)
@@ -109,6 +98,7 @@ router.post("/signup", (req, res) => {
           id:newUser.id,
           username:newUser.username
         }
+        console.log("******Sign up Data***** newuser", newUser)
         res.json(newUser);
       })
       .catch(err => {

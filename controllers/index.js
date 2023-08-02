@@ -1,6 +1,4 @@
 const router = require('express').Router();
-
-// const apiRoutes = require('./api');
 const loginSignOutRoutes = require('./login-signout-routes');
 const coursesRoutes = require('./coursesRoutes');
 const sessionRoutes = require('./sessionsRoutes');
@@ -14,10 +12,10 @@ const facultyProfileRoute = require('./facultyprofileroute');
 const newfacultyProfile = require('./newfacultyprofileroute');
 const studentProfileRoute = require('./studentprofileroute'); 
 const newstudentProfile = require('./newstudentprofileroute');
-// const homeRoutes = require('./homeRoutes');
 
-router.use('/', loginSignOutRoutes);
-// router.use('/api', apiRoutes);
+console.log("*********route is working********");
+
+
 router.use('/admin-dashboard', adminDashboardroutes);
 router.use('/student-dashboard', studentDashboardRoutes);
 router.use('/faculty-dashboard', facultyDashboardRoutes);
@@ -29,5 +27,6 @@ router.use('/addcourse', addcourseRoutes);
 router.use('/updatecourse', updatecourseRoutes);
 router.use('/studentprofile', studentProfileRoute);
 router.use('/newstudentprofile', newstudentProfile);
+router.use('/', loginSignOutRoutes);
 
 module.exports = router;
