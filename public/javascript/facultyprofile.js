@@ -7,13 +7,12 @@ const newFormHandler = async (event) => {
  const Bio = document.querySelector('#new-bio').value.trim();
   const qualification = document.querySelector('#new-qualification').value.trim();
   const current_position = document.querySelector('#new-current-position').value.trim();
-  // const imageSrc = document.querySelector('#new-image').value;
-  // const imageSrc = imageElement.getAttribute('src');
+  const imageSrc = document.querySelector('#new-image').value;
 const address = document.querySelector('#new-address').value.trim();
-  if (full_name && email && qualification && current_position && Bio && address) {
+  if (full_name && email && qualification && current_position && Bio && address && imageSrc) {
     const response = await fetch(`/newfacultyprofile`, {
       method: 'POST',
-      body: JSON.stringify({ full_name, email, qualification , current_position, Bio, address }),
+      body: JSON.stringify({ full_name, email, qualification , current_position, Bio, address , imageSrc }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -31,14 +30,14 @@ const address = document.querySelector('#new-address').value.trim();
 //   if (event.target.hasAttribute('data-id')) {
 //     const id = event.target.getAttribute('data-id');
 
-//     const response = await fetch(`/api/projects/${id}`, {
+//     const response = await fetch(`/facultyprofile/${id}`, {
 //       method: 'DELETE',
 //     });
 
 //     if (response.ok) {
-//       document.location.replace('/profile');
+//       document.location.replace('/facultygallery');
 //     } else {
-//       alert('Failed to delete project');
+//       alert('Failed to delete the facultyprofile');
 //     }
 //   }
 // };
@@ -47,6 +46,4 @@ document
   .querySelector('.new-profile-form')
   .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.project-list')
-//   .addEventListener('click', delButtonHandler);
+
