@@ -9,16 +9,16 @@ router.get("/", (req, res) => {
     //   // include:[Admin,Faculty,Student]
     //   // include:[Faculty,Student]
     // })
-    
-    User.findAll({})
-      .then(dbUsers => {
-        // res.json(dbUsers);
-        res.render("login");
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json({ msg: "an error occured", err });
-      });
+    res.render("login");
+    // User.findAll({})
+    //   .then(dbUsers => {
+    //     // res.json(dbUsers);
+       
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //     res.status(500).json({ msg: "an error occured", err });
+    //   });
   });
 
 router.get("/login",(req,res)=>{
@@ -54,6 +54,7 @@ router.get("/:id", (req, res) => {
 // sign up users/
 router.post("/", (req, res) => {
   // run hooks to hash and salt password; create user
+  
     User.create(req.body, {individualHooks: true} )
       .then(newUser => {
         // IMMEDIATE LOG IN = create new session for user with id and username (sessions set to 30 min)
@@ -102,6 +103,7 @@ router.post("/login", (req, res) => {
 
 router.post("/signup", (req, res) => {
   // run hooks to hash and salt password; create user
+  console.log("******Sign up Data*****", req.body)
     User.create(req.body, {individualHooks: true} )
       .then(newUser => {
         // IMMEDIATE LOG IN = create new session for user with id and username (sessions set to 30 min)
@@ -109,6 +111,7 @@ router.post("/signup", (req, res) => {
           id:newUser.id,
           username:newUser.username
         }
+        console.log("******Sign up Data***** newuser", newUser)
         res.json(newUser);
       })
       .catch(err => {

@@ -49,7 +49,7 @@ Student.init(
     },
     classes_missed: {
       type: DataTypes.INTEGER,
-    }
+    },
   },
   {
     sequelize,
