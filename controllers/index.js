@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const apiRoutes = require('./api');
+// const apiRoutes = require('./api');
 const loginSignOutRoutes = require('./login-signout-routes');
 const coursesRoutes = require('./coursesRoutes');
 const sessionRoutes = require('./sessionsRoutes');
@@ -15,7 +15,7 @@ const newstudentProfile = require('./newstudentprofileroute');
 // const homeRoutes = require('./homeRoutes');
 
 router.use('/', loginSignOutRoutes);
-router.use('/api', apiRoutes);
+// router.use('/api', apiRoutes);
 router.use('/admin-dashboard', adminDashboardroutes);
 router.use('/student-dashboard', studentDashboardRoutes);
 router.use('/faculty-dashboard', facultyDashboardRoutes);
