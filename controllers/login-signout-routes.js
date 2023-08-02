@@ -12,8 +12,8 @@ router.get("/", (req, res) => {
     
     User.findAll({})
       .then(dbUsers => {
-        res.json(dbUsers);
-        // res.render("login");
+        // res.json(dbUsers);
+        res.render("login");
       })
       .catch(err => {
         console.log(err);
