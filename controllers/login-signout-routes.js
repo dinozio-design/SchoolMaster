@@ -5,20 +5,7 @@ const bcrypt  = require("bcrypt");
 
 router.get("/", (req, res) => {
   console.log("Inside /////// ***********");
-    // User.findAll({
-    //   // include:[Admin,Faculty,Student]
-    //   // include:[Faculty,Student]
-    // })
     res.render("login");
-    // User.findAll({})
-    //   .then(dbUsers => {
-    //     // res.json(dbUsers);
-       
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //     res.status(500).json({ msg: "an error occured", err });
-    //   });
   });
 
 router.get("/login",(req,res)=>{
@@ -34,7 +21,7 @@ router.get("/signup",(req,res)=>{
     res.render("signup")
 })
 
-  // logout by hitting /users/logout
+  // logout by hitting /logout
 router.get("/logout",(req,res)=>{
     req.session.destroy();
     res.redirect('/');
@@ -51,7 +38,7 @@ router.get("/:id", (req, res) => {
       });
 });
 
-// sign up users/
+// sign up 
 router.post("/", (req, res) => {
   // run hooks to hash and salt password; create user
   
@@ -70,7 +57,7 @@ router.post("/", (req, res) => {
       });
 });
 
-// login /users/login
+// login /login
 router.post("/login", (req, res) => {
   // find username name that matches request
     User.findOne({
