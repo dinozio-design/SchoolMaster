@@ -40,7 +40,7 @@ app.use("/", allRoutes);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).json({ msg: 'Internal Server Error' }, err);
+    res.status(500).json({ msg: 'Internal Server Error' });
   });
 
 sequelize.sync({ force: false }).then(function() {
