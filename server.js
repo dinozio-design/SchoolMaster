@@ -36,7 +36,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use("/", allRoutes);
+app.use(allRoutes);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
