@@ -26,9 +26,9 @@ Department.hasMany(Faculty, {
     foreignKey: 'department_id'
 });
 
-// Courses.hasMany(Academic_Semester, {
-//     foreignKey: 'id'
-// });
+Courses.hasMany(Academic_Semester, {
+    foreignKey: 'courses_id'
+});
 
 // Student.hasMany(Academic_Semester, {
 //     foreignKey: 'id'
