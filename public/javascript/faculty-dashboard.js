@@ -5,7 +5,7 @@ async function viewfacultyprofile(event) {
   document.location.replace('/facultygallery');
 };
 
-document.querySelector('#faculty-profile').addEventListener('submit', viewfacultyprofile);
+document.querySelector('#faculty-profile').addEventListener('click', viewfacultyprofile);
 
 //view student profile
 async function viewStudentcourses(event) {
@@ -14,6 +14,6 @@ async function viewStudentcourses(event) {
   document.location.replace('/courses');
 };
 
-document.querySelector('#student-courses').addEventListener('submit', viewStudentcourses);
+document.querySelector('#student-courses').addEventListener('click', viewStudentcourses);
 
 

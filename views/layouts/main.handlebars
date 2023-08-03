@@ -13,28 +13,19 @@
    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <header id="navheader" class="text-white">
-        <section></section>
-       {{#if loggedIn}}
-       
-        <ul>
-
-          <li>  <a href="http://localhost:3001/">logout</a></li>
-          <li>  <a href="http://localhost:3001/courses">Courses</a></li>
-           <li> <a href="http://localhost:3001/facultygallery">Faculty Gallery</a></li>
-           <li> <a href="http://localhost:3001/studentprofile">Student Profile</a></li>
-         
-            </ul>
-        {{else}}
-
-        <ul>
-             <li id="logo">  <a href="#">School Master</a></li>
+    <div class="nav_bar">
+    <h1 class="logo">School<span>Master</span></h1>
+    <ul>
           <li>  <a href="http://localhost:3001/">Login</a></li>
-      <li> <a href="http://localhost:3001/facultygallery">Faculty Gallery</a></li>
+          <li>  <a href="http://localhost:3001/admin-dashboard">Admin</a></li>
+            <li>  <a href="http://localhost:3001/newfacultyprofile">Add Faculty</a></li>
+              <li>  <a href="http://localhost:3001/newstudentprofile">Add Student</a></li>
+                <li>  <a href="http://localhost:3001/addcourse">Add Course</a></li>
+                  <li>  <a href="http://localhost:3001/sessions">View Courses</a></li>
+<li> <a href="http://localhost:3001/facultygallery">Faculty Gallery</a></li>
            <li> <a href="http://localhost:3001/studentprofile">Student Profile</a></li>
-        </ul>
-        {{/if}}  
-    </header>
+    </ul>
+</div>
     <main>
         {{{body}}}
     </main>
