@@ -8,14 +8,16 @@ const Student = require('./students');
 const User = require('./user');
 const Academic_Semester = require('./academic_semester');
 
+Student.belongsTo(Courses);
 
+Faculty.belongsTo(Courses);
 // Student.hasMany(Courses, {
 //     foreignKey: 'student_id'
 // });
 
-Faculty.hasOne(Courses, {
-    foreignKey: 'faculty_id'
-});
+// Faculty.hasOne(Courses, {
+//     foreignKey: 'faculty_id'
+// });
 
 // Courses.belongTo(Faculty, {
 //     foreignKey: 'faculty_id'
