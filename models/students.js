@@ -30,20 +30,20 @@ Student.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // course: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'courses',
-    //     key: 'id'
-    //   }
-    // },
-    // session: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'academic_semester',
-    //     key: 'id'
-    //   }
-    // },
+    course_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'courses',
+        key: 'id'
+      }
+    },
+    session: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'academic_semester',
+        key: 'id'
+      }
+    },
     grades: {
       type: DataTypes.STRING,
     },

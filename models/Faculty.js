@@ -48,6 +48,13 @@ Faculty.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    course_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "courses",
+        key: "id"
+      }
+    }
   },
   {
     sequelize,
