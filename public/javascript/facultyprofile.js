@@ -17,7 +17,7 @@ const address = document.querySelector('#new-address').value.trim();
         'Content-Type': 'application/json',
       },
     });
-
+   
     if (response.ok) {
       document.location.replace('/facultygallery');
     } else {

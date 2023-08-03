@@ -1,6 +1,5 @@
 const newstudentFormHandler = async (event) => {
     event.preventDefault();
-  
     const full_name = document.querySelector('#new-student-name').value.trim();
     const email = document.querySelector('#new-student-email').value.trim();
     console.log(email);
