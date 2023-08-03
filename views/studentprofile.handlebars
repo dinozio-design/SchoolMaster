@@ -7,7 +7,7 @@
 <div class="card box-shadow-card" style="width: 18rem;">
   
   <div class="card-body">
-    <h5 class="card-title"><a href="/studentprofile{{studentdata.id}}">{{studentdata.full_name}}</a></h5>
+    <h5 class="card-title"><a href="/studentprofile/{{studentdata.id}}">{{studentdata.full_name}}</a></h5>
     <p class="card-text">E mail : {{studentdata.email}}</p>
      <p class="card-text">Address : {{studentdata.address}}</p>
       <p class="card-text">Parent/Guardian Name : {{studentdata.parent_name}}</p>
@@ -18,9 +18,5 @@
     {{/each}}
 
 </div>
-<<<<<<< HEAD
-<script src="/javascript/studentprofile.js"></script>
-=======
    {{> footer}}
-<script src="/studentprofile.js"></script>
->>>>>>> e6d044364563c07bad9346d20b34f8426bec202e
+<script src="/javascript/studentprofile.js"></script>
