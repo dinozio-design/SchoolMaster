@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,59 @@
            <li> <a href="http://localhost:3001/studentprofile">Student Profile</a></li>
     </ul>
 </div>
+    <main>
+        {{{body}}}
+    </main>
+</body>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Master</title>
+ <!--fonot awsome link-->
+       <script src="https://kit.fontawesome.com/7d88a43d0e.js" crossorigin="anonymous"></script>
+        <!--Bootstrap link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+   <div class="nav_bar">
+    <h1 class="logo">School<span>Master</span></h1>
+       {{#if logged_in}}
+       
+        <ul>
+
+         <ul>
+          <li>  <a href="http://localhost:3001/">Logout</a></li>
+          <li>  <a href="http://localhost:3001/admin-dashboard">Admin</a></li>
+            <li>  <a href="http://localhost:3001/newfacultyprofile">Add Faculty</a></li>
+              <li>  <a href="http://localhost:3001/newstudentprofile">Add Student</a></li>
+                <li>  <a href="http://localhost:3001/addcourse">Add Course</a></li>
+                  <li>  <a href="http://localhost:3001/sessions">View Courses</a></li>
+<li> <a href="http://localhost:3001/facultygallery">Faculty Gallery</a></li>
+           <li> <a href="http://localhost:3001/studentprofile">Student Profile</a></li>
+    </ul>
+         
+            </ul>
+        {{else}}
+
+        <ul>
+             <li id="logo">  <a href="#">School Master</a></li>
+           <li>  <a href="http://localhost:3001/admin-dashboard">Admin</a></li>
+            <li>  <a href="http://localhost:3001/newfacultyprofile">Add Faculty</a></li>
+              <li>  <a href="http://localhost:3001/newstudentprofile">Add Student</a></li>
+                <li>  <a href="http://localhost:3001/addcourse">Add Course</a></li>
+                  <li>  <a href="http://localhost:3001/sessions">View Courses</a></li>
+<li> <a href="http://localhost:3001/facultygallery">Faculty Gallery</a></li>
+           <li> <a href="http://localhost:3001/studentprofile">Student Profile</a></li>
+        </ul>
+        {{/if}}  
+    </header>
     <main>
         {{{body}}}
     </main>
