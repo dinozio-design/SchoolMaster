@@ -7,7 +7,7 @@ console.log(`got courses`)
 router.get('/', async (req, res) => {
   try {
     const coursesData = await Courses.findAll({
-      attributes: ['id', 'course', 'course_description', 'department', 'fees'],
+      attributes: ['id', 'course', 'course_description', 'fees'],
     });
 
     const courses = coursesData.map((course) => course.get({ plain: true }));
@@ -25,13 +25,12 @@ router.get('/:id', async (req, res) => {
     const selectedSemester = await Academic_Semester.findByPk(semesterId);
     console.log(selectedSemester)
     const coursesData = await Courses.findAll({
-      attributes: ['id', 'course','course_description','department','fees'],
+      attributes: ['id', 'course','course_description','fees'],
         where: { semester: semesterId },
     })
     console.log(coursesData)
     const courses = coursesData.map((course) => course.get({ plain: true }));
   console.log(courses)
-  // Pass serialized data and session flag into template
   res.render('courses', {selectedSemester,courses});
   } catch (error) {
     console.error(error);

@@ -32,13 +32,13 @@ Courses.init(
     //    key:"id",
     //   }
     // },
-    // semester: {
-    //   type: DataTypes.INTEGER,
-    //   references:{
-    //    model:"academic_semester",
-    //    key:"id",
-    //   }
-    //   },
+    semester: {
+      type: DataTypes.INTEGER,
+      references:{
+       model:"academic_semester",
+       key:"id",
+      }
+      },
    fees:{
       type: DataTypes.DECIMAL,
       allowNull: false,
