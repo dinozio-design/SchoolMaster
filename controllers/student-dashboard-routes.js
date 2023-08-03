@@ -2,11 +2,10 @@
 
 const router = require('express').Router();
 
-router.get('/', async (req,res)=>{
-  console.log("******************Insert student dashboard");
-  res.render('student-dashboard');
-
-})
+router.get('/', (req, res) => {
+  req.session.logged_in = true; 
+  res.render('student-dashboard', { logged_in: true }); 
+});
 
 
 module.exports = router;
