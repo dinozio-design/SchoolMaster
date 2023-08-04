@@ -83,13 +83,22 @@ This app is covered under MIT license. For details and limitations of this licen
 
 ## Contributing
 This app has been possible with great work and contribution of the following colleagues:<br>
-    soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>-Login/Signup is done by Sonia
-     rbala [GitHub - link](https://github.com/rbala16)<br>-Admin/Student/faculty dashboard,Nodemon  package installation and styling CSS done by Rajni
-    sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Add courses,update courses done by Suman,make sure to test you add ,e.g(http://localhost:3001/updatecourse/1) (whatever the course id you want to update)
-    SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>-Faculty/Student profile and add faculty profile and add Student is done ny Swathi
-    Presentation and layout is done by Sonia/Swathi/Sam/Rajni/Suman
+    - soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>-Login/Signup is done by Sonia
+    -  rbala [GitHub - link](https://github.com/rbala16)<br>-Admin/Student/faculty dashboard,Nodemon  package installation and styling - CSS ,README file and footer handlebars are done by Rajni
+    - sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Add courses,update courses done by Suman<br>
+   Note:  make sure to test you add  this url in the address bar ,e.g(http://localhost:3001/updatecourse/1) (whatever the course id you want to update).
+    -SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>-Faculty/Student profile and add faculty profile and add -Student is done ny Swathi,<br>
+    Note:When you add Faculty ,you need to add url of the image ,you can add because new faculty image would be only added,when new faculty will hire in school
+    - main handlers is done by Sonia  and Rajni
+    -Presentation and layout is done by Sonia/Swathi/Sam/Rajni/Suman
 
-
+## Mockup
+The following animation demonstrates the application functionality:
+![loginpage](./assets/loginpage) 
+![add-course](./assets/addcourse.jpg) 
+![admin-dashboard](./assets/admin-dashboard.jpg) 
+![faculty-gallery](./assets/facultygallery) 
+![view-course](./assets/view-course.jpg) 
 
 
 ## Questions
@@ -105,7 +114,7 @@ If you have any questions, you can email us .<br>
 You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.<br>
-
+https://schoolmaster-8e6973afb49c.herokuapp.com/
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.<br>
 https://github.com/dinozio-design/SchoolMaster<br>
