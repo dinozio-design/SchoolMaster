@@ -54,7 +54,8 @@ When I click on the option to delete a student, then I am presented with a list 
 Run the following command at the terminal:
 `mysql -u root -p` <br>
 `npm run seed` <br>
-`npm start`
+`npm start` or 
+`npm run nodemon`
 `http://localhost:3001/`
 
 
@@ -73,6 +74,7 @@ Run the following command at the terminal:
 - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 -  [express-handlebars](https://www.npmjs.com/package/express-handlebars)
 - [express-session](https://www.npmjs.com/package/express-session)
+- [nodemon](https://www.npmjs.com/package/nodemon)
 
 ## License
 This app is covered under MIT license. For details and limitations of this license please visit:
@@ -81,13 +83,13 @@ This app is covered under MIT license. For details and limitations of this licen
 
 ## Contributing
 This app has been possible with great work and contribution of the following colleagues:<br>
-    soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>
-     rbala [GitHub - link](https://github.com/rbala16)<br>
-    sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>
-    SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>
-????
+    soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>-Login/Signup is done by Sonia
+     rbala [GitHub - link](https://github.com/rbala16)<br>-Admin/Student/faculty dashboard and styling css done by Rajni
+    sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Add courses,update courses done by Suman,make sure to test you add ,e.g(http://localhost:3001/updatecourse/1) (whatever the course id you want to update)
+    SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>-Faculty/Student profile and add faculty profile and add Student is done ny Swathi
+    Presentation and layout is done by Sonia/Swathi/Sam/Rajni/Suman
 
-## Mockup
+
 
 
 ## Questions
@@ -106,8 +108,8 @@ You are required to submit BOTH of the following for review:
 
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.<br>
-
+https://github.com/dinozio-design/SchoolMaster<br>
 
 
 ### Authors Notes: 
-  _This README and accompanying repo have been brought to you by:_<br>© Sam Azimi,Rajni bala,Sonia Sebastian,Sumanpreet Kaur,Swathi Vinod - 2023 CodeCamp Student<br>Confidential and Proprietary. All Rights Reserved.
+  _This README and accompanying repo have been brought to you by:_<br>© Rajni bala,Sonia Sebastian,Sumanpreet Kaur,am Azimi,Swathi Vinod - 2023 CodeCamp Student<br>Confidential and Proprietary. All Rights Reserved.
