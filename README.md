@@ -84,7 +84,7 @@ This app is covered under MIT license. For details and limitations of this licen
 ## Contributing
 This app has been possible with great work and contribution of the following colleagues:<br>
     soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>-Login/Signup is done by Sonia
-     rbala [GitHub - link](https://github.com/rbala16)<br>-Admin/Student/faculty dashboard and styling css done by Rajni
+     rbala [GitHub - link](https://github.com/rbala16)<br>-Admin/Student/faculty dashboard,Nodemon  package installation and styling CSS done by Rajni
     sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Add courses,update courses done by Suman,make sure to test you add ,e.g(http://localhost:3001/updatecourse/1) (whatever the course id you want to update)
     SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>-Faculty/Student profile and add faculty profile and add Student is done ny Swathi
     Presentation and layout is done by Sonia/Swathi/Sam/Rajni/Suman
