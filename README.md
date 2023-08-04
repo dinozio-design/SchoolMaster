@@ -94,11 +94,11 @@ This app has been possible with great work and contribution of the following col
 
 ## Mockup
 The following animation demonstrates the application functionality:
-![loginpage](./assets/loginpage) 
+![loginpage](./assets/loginpage.jpg) 
 ![add-course](./assets/addcourse.jpg) 
-![admin-dashboard](./assets/admin-dashboard.jpg) 
-![faculty-gallery](./assets/facultygallery) 
-![view-course](./assets/view-course.jpg) 
+![admin-dashboard](./assets/admindashboard.jpg) 
+![faculty-gallery](./assets/facultygallery.jpg) 
+![view-course](./assets/viewcourses.jpg) 
 
 
 ## Questions
